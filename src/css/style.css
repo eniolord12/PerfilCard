@@ -1,0 +1,175 @@
+/* Configurações globais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    /* Um fundo cinza claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    /* Transição suave para o modo escuro */
+}
+
+/* O container principal do card */
+.perfil-card {
+    background-color: #ffffff;
+    width: 320px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transição suave */
+
+    /* IMPORTANTE: Adiciona posicionamento relativo para os ícones */
+    position: relative;
+}
+
+/* Container da foto para ajudar no alinhamento */
+.foto-container {
+    margin-bottom: 15px;
+}
+
+/* Estilo da Foto de Perfil */
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Deixa a imagem redonda */
+    object-fit: cover;
+    /* Garante que a imagem cubra o espaço */
+    border: 3px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+    /* Transição suave */
+}
+
+/* Estilo do nome de usuário */
+.nome-usuario {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 5px;
+    transition: color 0.3s ease;
+    /* Transição suave */
+}
+
+/* Estilo da descrição */
+.descricao {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+    /* Transição suave */
+}
+
+/* Container dos links */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaçamento entre os links */
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada link */
+.link {
+    display: block;
+    background-color: #007bff;
+    /* Cor principal (azul) */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.link:hover {
+    background-color: #0056b3;
+    /* Um azul mais escuro */
+    transform: scale(1.03);
+    /* Leve aumento */
+}
+
+/* --- NOVOS ESTILOS ADICIONADOS PARA ÍCONES DE MODO --- */
+
+/* Container dos ícones de toggle */
+.toggle-icons {
+    position: absolute;
+    /* Posiciona absolutamente dentro do perfil-card */
+    top: 15px;
+    /* Distância do topo */
+    right: 15px;
+    /* Distância da direita */
+    cursor: pointer;
+    z-index: 10;
+    /* Garante que esteja acima de outros elementos */
+}
+
+.mode-icon {
+    width: 28px;
+    /* Tamanho do ícone */
+    height: 28px;
+    display: none;
+    /* Por padrão, todos os ícones ficam ocultos */
+    transition: opacity 0.3s ease;
+}
+
+.mode-icon.visible {
+    display: block;
+    /* Mostra apenas o ícone com a classe visible */
+}
+
+
+/* --- ESTILOS PARA O MODO ESCURO --- */
+body.dark-mode {
+    background-color: #1a1a1a;
+    /* Fundo escuro */
+    color: #e0e0e0;
+    /* Texto claro */
+}
+
+body.dark-mode .perfil-card {
+    background-color: #2c2c2c;
+    /* Fundo do card mais escuro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .foto-perfil {
+    border-color: #555;
+    /* Borda da foto mais escura */
+}
+
+body.dark-mode .nome-usuario {
+    color: #f0f0f0;
+    /* Nome de usuário claro */
+}
+
+body.dark-mode .descricao {
+    color: #b0b0b0;
+    /* Descrição mais clara */
+}
+
+body.dark-mode .link {
+    background-color: #555;
+    /* Links em cinza escuro no modo escuro */
+    color: #f0f0f0;
+}
+
+body.dark-mode .link:hover {
+    background-color: #777;
+    /* Hover dos links mais claro */
+}
+
+/* REMOVIDO: Estilos para o botão de texto 'toggle-button' */
+/* body.dark-mode .toggle-button {
+    background-color: #007bff;
+}
+
+body.dark-mode .toggle-button:hover {
+    background-color: #0056b3;
+} */
